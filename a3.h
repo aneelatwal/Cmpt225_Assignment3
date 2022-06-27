@@ -8,20 +8,24 @@ using std::string;
 
 //Question 1
 //PARAM: arr is array to print the Cartesian product of, n is size of arr
-void cartesianProduct(int arr[], int n)
+void cartesianProduct(int arr[], int n, int & ops)
  {
     int i = 0;
+    ops = 1; //initializes cost for the first statement
     while (i < n) {
             int j = 0;
             while (j < n) {
                 cout << "{" << arr[i] << "," << arr[j] << "}";
                 j++;
                 cout << " ";
+                ops += 4; //while comparison, both output lines, and incrementing j
             }
-
+            ops++; //terminating while comparison
             cout << endl;
             i++;
+            ops += 4; //while comparison, initializing j, ouput endl, and incrementing i
     }
+    ops++; //terminating while comparison
  }
 
 
@@ -184,3 +188,27 @@ unsigned pow(unsigned int base, unsigned int exp) {
     }
     return ret;
 } // pow
+
+
+
+
+
+
+
+
+
+
+//EXAMPLE
+int sumSquares(int arr[], int n, int & ops)
+{
+       int i = 0;
+       int sum = 0;
+       ops = 2; //initializes cost for the first two statements
+       while (i < n) {
+              sum += arr[i] * arr[i]; //counts as one operation
+              i++;
+              ops += 3; //while comparison and above two lines
+       }
+       ops++; //terminating while comparison
+       return sum; //not included in count
+}
