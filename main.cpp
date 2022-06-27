@@ -7,20 +7,20 @@ void triangleTest(); //Question 2 Test
 
 void ssortTest(); //Question 4 Test
 void patternTest(); //Question 5 Test
-
+void lsearchTest(); //Question 6 Test
 void powTest(); //Question 7 Test
 
 
 int main () {
-    sumSquareTest();
+    sumSquareTest(); //Example
 
-    cartesianProductTest();
-    triangleTest();
+    cartesianProductTest(); //q1
+    triangleTest(); //q2
 
-    ssortTest();
-    patternTest();
-
-    powTest();
+    ssortTest(); //q4
+    patternTest(); //q5
+    lsearchTest(); //q6
+    powTest(); //q7
 
     return 0;
 }
@@ -94,21 +94,25 @@ void patternTest() {
     int cost = 0;
     pattern(n, i, cost);
     cout << endl << endl << "cost = " << cost;
-    cout << endl << "t(ssort): func = " << "TBD";
+    cout << endl << "t(pattern): func = " << "TBD";
     cout << endl << "--------------------------------------------------------" << endl << endl;
 }
 
 
 
 
-
-
-
-
-
-
-
-
+//Question 6 Test
+void lsearchTest() {
+    cout << "LINEAR SEARCH TEST" << endl;
+       int arr[] = { 1,2,3,4,5,6,7,8,9,10 };
+       unsigned int len = 10;
+       int target = 5;
+       int cost = 0;
+       cout << "linear search = " << lsearch(arr, len, target, cost);
+       cout << endl << "cost = " << cost;
+       cout << endl << "t(lsearch): func = " << "TBD";
+       cout << endl << "--------------------------------------------------------" << endl << endl;
+}
 
 
 
