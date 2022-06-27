@@ -5,6 +5,7 @@ using std::endl;
 using std::string;
 
 
+
 //Question 1
 //PARAM: arr is array to print the Cartesian product of, n is size of arr
 void cartesianProduct(int arr[], int n)
@@ -22,6 +23,8 @@ void cartesianProduct(int arr[], int n)
             i++;
     }
  }
+
+
 
 
 
@@ -50,6 +53,8 @@ void cartesianProduct(int arr[], int n)
               cout << endl;
        }
 }
+
+
 
 
 
@@ -92,6 +97,8 @@ int rcIndex(int r, int c, int columns)
 
 
 
+
+
 //Question 4
 // PARAM: arr is array to be sorted, n is size of array, i should initially = 0
 void ssort(int arr[], int n, int i)
@@ -115,6 +122,8 @@ void ssort(int arr[], int n, int i)
               ssort(arr, n, i + 1);
        }
 }
+
+
 
 
 
@@ -144,6 +153,8 @@ void pattern(int n, int i)
 
 
 
+
+
 //Question 6
 // Desc: Linear search.  Reports position if found, else -1
 // Post:  Elements unchanged
@@ -156,6 +167,8 @@ int lsearch(int arr[], unsigned int len, int target) {
         return 1 + lsearch(arr+1, len-1, target);
     }
 } // lsearch
+
+
 
 
 
