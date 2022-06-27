@@ -18,12 +18,12 @@ void cartesianProduct(int arr[], int n, int & ops)
                 cout << "{" << arr[i] << "," << arr[j] << "}";
                 j++;
                 cout << " ";
-                ops += 4; //while comparison, both output lines, and incrementing j
+                ops += 4; //while comparison, above 3 lines
             }
 
             cout << endl;
             i++;
-            ops += 5; //while comparison, initializing j, terminating while comparison, ouput, and incrementing i
+            ops += 5; //while comparison, initializing j, terminating while comparison, above 2 lines
     }
     ops++; //terminating while comparison
  }
@@ -42,12 +42,12 @@ void cartesianProduct(int arr[], int n, int & ops)
             while (j <= i) {
                     cout << j << " ";
                     j++;
-                    ops += 3; //while comparison, output, incrementing j
+                    ops += 3; //while comparison, above 2 lines
             }
 
             cout << endl;
             i++;
-            ops += 5; //while comparison, initializing j, terminating while comparison, output, incrementing i
+            ops += 5; //while comparison, initializing j, terminating while comparison, above 2 lines
     }
     ops++; //terminating while comparison
     while (i > 0) {
@@ -56,10 +56,10 @@ void cartesianProduct(int arr[], int n, int & ops)
             while (j <= i) {
                     cout << j << " ";
                     j++;
-                    ops += 3; //while comparison, output, incrementing j
+                    ops += 3; //while comparison, above 2 lines
             }
             cout << endl;
-            ops += 5; //while comparison, decrementing i, initializing j, terminating while comparison, output
+            ops += 5; //while comparison, decrementing i, initializing j, terminating while comparison, above line
     }
     ops++; //terminating while comparison
 }
@@ -111,7 +111,7 @@ void cartesianProduct(int arr[], int n, int & ops)
 
 //Question 4
 // PARAM: arr is array to be sorted, n is size of array, i should initially = 0
-void ssort(int arr[], int n, int i)
+void ssort(int arr[], int n, int i, int & ops)
 {
     if (i < n-1) {
         // Find and swap smallest remaining
@@ -119,18 +119,22 @@ void ssort(int arr[], int n, int i)
         int smallest = i;
 
         while (next < n) {
-                if (arr[next] < arr[smallest]) {
-                    smallest = next;
-                }
-                next++;
+            if (arr[next] < arr[smallest]) {
+                smallest = next;
+                ops++; //above line
+            }
+            next++;
+            ops += 3; //while comparison, if comparison, incrementing next
         }
 
         // Swap i with smallest
         int temp = arr[i];
         arr[i] = arr[smallest];
         arr[smallest] = temp;
-        ssort(arr, n, i + 1);
+        ops += 6; //initialize next, initialize smallest, terminate while comparison, above 3 lines
+        ssort(arr, n, i + 1, ops);
     }
+    ops++; //if comparison
 }
 
 
@@ -183,15 +187,19 @@ int lsearch(int arr[], unsigned int len, int target) {
 
 
 //Question 7
-unsigned pow(unsigned int base, unsigned int exp) {
+unsigned pow(unsigned int base, unsigned int exp, int & ops) {
     unsigned int ret = 1;
+    ops = 1; //initializes cost for the first statement
     while (exp > 0) {
         if (exp & 1) {
             ret *= base;
+            ops++; //above line
         }
         exp >>= 1;
         base = base * base;
+        ops += 4; //while comparison, if comparison, above 2 lines
     }
+    ops++; //terminate while comparison
     return ret;
 } // pow
 
