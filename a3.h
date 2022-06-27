@@ -20,9 +20,10 @@ void cartesianProduct(int arr[], int n, int & ops)
                 cout << " ";
                 ops += 4; //while comparison, both output lines, and incrementing j
             }
+
             cout << endl;
             i++;
-            ops += 5; //while comparison, terminating while comparison initializing j, ouput endl, and incrementing i
+            ops += 5; //while comparison, initializing j, terminating while comparison, ouput, and incrementing i
     }
     ops++; //terminating while comparison
  }
@@ -32,29 +33,35 @@ void cartesianProduct(int arr[], int n, int & ops)
 
 
  //Question 2
- void triangle(int x)
+ void triangle(int x, int & ops)
 {
-       int i = 0;
-       while (i < x) {
-              int j = 0;
-              while (j <= i) {
-                     cout << j << " ";
-                     j++;
-              }
+    int i = 0;
+    ops = 1; //initializes cost for the first statement
+    while (i < x) {
+            int j = 0;
+            while (j <= i) {
+                    cout << j << " ";
+                    j++;
+                    ops += 3; //while comparison, output, incrementing j
+            }
 
-              cout << endl;
-              i++;
-       }
-
-       while (i > 0) {
-              i--;
-              int j = 0;
-              while (j <= i) {
-                     cout << j << " ";
-                     j++;
-              }
-              cout << endl;
-       }
+            cout << endl;
+            i++;
+            ops += 5; //while comparison, initializing j, terminating while comparison, output, incrementing i
+    }
+    ops++; //terminating while comparison
+    while (i > 0) {
+            i--;
+            int j = 0;
+            while (j <= i) {
+                    cout << j << " ";
+                    j++;
+                    ops += 3; //while comparison, output, incrementing j
+            }
+            cout << endl;
+            ops += 5; //while comparison, decrementing i, initializing j, terminating while comparison, output
+    }
+    ops++; //terminating while comparison
 }
 
 
@@ -106,24 +113,24 @@ void cartesianProduct(int arr[], int n, int & ops)
 // PARAM: arr is array to be sorted, n is size of array, i should initially = 0
 void ssort(int arr[], int n, int i)
 {
-       if (i < n-1) {
-              // Find and swap smallest remaining
-              int next = i + 1;
-              int smallest = i;
+    if (i < n-1) {
+        // Find and swap smallest remaining
+        int next = i + 1;
+        int smallest = i;
 
-              while (next < n) {
-                     if (arr[next] < arr[smallest]) {
-                          smallest = next;
-                     }
-                     next++;
-              }
+        while (next < n) {
+                if (arr[next] < arr[smallest]) {
+                    smallest = next;
+                }
+                next++;
+        }
 
-              // Swap i with smallest
-              int temp = arr[i];
-              arr[i] = arr[smallest];
-              arr[smallest] = temp;
-              ssort(arr, n, i + 1);
-       }
+        // Swap i with smallest
+        int temp = arr[i];
+        arr[i] = arr[smallest];
+        arr[smallest] = temp;
+        ssort(arr, n, i + 1);
+    }
 }
 
 
@@ -136,22 +143,22 @@ void ssort(int arr[], int n, int i)
 // e.g. pattern(8, 0)
 void pattern(int n, int i)
 {
-       if (n > 0) {
-              pattern(n/2, i);
-              // Print i spaces
-              cout << string(i, ' ');
+    if (n > 0) {
+            pattern(n/2, i);
+            // Print i spaces
+            cout << string(i, ' ');
 
-              // A loop to print n asterisks, each one followed by a space
-              int ast = 0;
-              while (ast < n) {
-                     cout << "* ";
-                     ast++;
-              }
+            // A loop to print n asterisks, each one followed by a space
+            int ast = 0;
+            while (ast < n) {
+                    cout << "* ";
+                    ast++;
+            }
 
-              cout << endl;
-              i += n;
-              pattern(n / 2, i);
-       }
+            cout << endl;
+            i += n;
+            pattern(n / 2, i);
+    }
 }
 
 
@@ -200,14 +207,14 @@ unsigned pow(unsigned int base, unsigned int exp) {
 //EXAMPLE
 int sumSquares(int arr[], int n, int & ops)
 {
-       int i = 0;
-       int sum = 0;
-       ops = 2; //initializes cost for the first two statements
-       while (i < n) {
-              sum += arr[i] * arr[i]; //counts as one operation
-              i++;
-              ops += 3; //while comparison and above two lines
-       }
-       ops++; //terminating while comparison
-       return sum; //not included in count
+    int i = 0;
+    int sum = 0;
+    ops = 2; //initializes cost for the first two statements
+    while (i < n) {
+            sum += arr[i] * arr[i]; //counts as one operation
+            i++;
+            ops += 3; //while comparison and above two lines
+    }
+    ops++; //terminating while comparison
+    return sum; //not included in count
 }
