@@ -4,7 +4,9 @@
 void sumSquareTest(); //EXAMPLE Test
 void cartesianProductTest(); //Question 1 Test
 void triangleTest(); //Question 2 Test
-void ssortTest(); //Question 3 Test
+
+void ssortTest(); //Question 4 Test
+void patternTest(); //Question 5 Test
 
 void powTest(); //Question 7 Test
 
@@ -14,7 +16,9 @@ int main () {
 
     cartesianProductTest();
     triangleTest();
+
     ssortTest();
+    patternTest();
 
     powTest();
 
@@ -53,7 +57,16 @@ void triangleTest() {
 
 
 
-//Question 3 Test
+
+
+
+
+
+
+
+
+
+//Question 4 Test
 void ssortTest() {
     cout << "SSORT TEST" << endl;
     int arr[] = { 10,2,3,5,4,8,7,6,9,1 };
@@ -64,6 +77,22 @@ void ssortTest() {
     for (int i = 0; i < n; i ++) {
         cout << endl << arr[i];
     }
+    cout << endl << endl << "cost = " << cost;
+    cout << endl << "t(ssort): func = " << "TBD";
+    cout << endl << "--------------------------------------------------------" << endl << endl;
+}
+
+
+
+
+
+//Question 5 Test
+void patternTest() {
+    cout << "PATTERN TEST" << endl;
+    int n = 8;
+    int i = 0;
+    int cost = 0;
+    pattern(n, i, cost);
     cout << endl << endl << "cost = " << cost;
     cout << endl << "t(ssort): func = " << "TBD";
     cout << endl << "--------------------------------------------------------" << endl << endl;
@@ -84,13 +113,7 @@ void ssortTest() {
 
 
 
-
-
-
-
-
-
-//Question 7
+//Question 7 Test
 void powTest() {
     cout << "POW TEST" << endl;
     int base = 2;

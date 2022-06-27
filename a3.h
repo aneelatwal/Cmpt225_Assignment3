@@ -113,18 +113,20 @@ void cartesianProduct(int arr[], int n, int & ops)
 // PARAM: arr is array to be sorted, n is size of array, i should initially = 0
 void ssort(int arr[], int n, int i, int & ops)
 {
+    ops++; //if comparison
     if (i < n-1) {
         // Find and swap smallest remaining
         int next = i + 1;
         int smallest = i;
 
         while (next < n) {
+            ops++; //if comparison
             if (arr[next] < arr[smallest]) {
                 smallest = next;
                 ops++; //above line
             }
             next++;
-            ops += 3; //while comparison, if comparison, incrementing next
+            ops += 2; //while comparison, incrementing next
         }
 
         // Swap i with smallest
@@ -134,7 +136,6 @@ void ssort(int arr[], int n, int i, int & ops)
         ops += 6; //initialize next, initialize smallest, terminate while comparison, above 3 lines
         ssort(arr, n, i + 1, ops);
     }
-    ops++; //if comparison
 }
 
 
@@ -145,10 +146,11 @@ void ssort(int arr[], int n, int i, int & ops)
 // PRE: n is a power of 2 greater than zero.
 // PRE: Initial call should be to i = 0
 // e.g. pattern(8, 0)
-void pattern(int n, int i)
+void pattern(int n, int i, int & ops)
 {
+    ops++; //if comparison
     if (n > 0) {
-            pattern(n/2, i);
+            pattern(n/2, i, ops);
             // Print i spaces
             cout << string(i, ' ');
 
@@ -157,11 +159,13 @@ void pattern(int n, int i)
             while (ast < n) {
                     cout << "* ";
                     ast++;
+                    ops += 3; //while comparison, above 2 lines
             }
 
             cout << endl;
             i += n;
-            pattern(n / 2, i);
+            ops += 5; //output string, initialize ast, terminate while comparison, above 2 lines
+            pattern(n / 2, i, ops);
     }
 }
 
