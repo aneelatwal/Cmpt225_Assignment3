@@ -4,7 +4,7 @@
 void sumSquareTest(); //EXAMPLE Test
 void cartesianProductTest(); //Question 1 Test
 void triangleTest(); //Question 2 Test
-
+void matrixSelfMultiplyTest(); //Question 3 Test
 void ssortTest(); //Question 4 Test
 void patternTest(); //Question 5 Test
 void lsearchTest(); //Question 6 Test
@@ -16,7 +16,7 @@ int main () {
 
     cartesianProductTest(); //q1
     triangleTest(); //q2
-
+    matrixSelfMultiplyTest(); //q3
     ssortTest(); //q4
     patternTest(); //q5
     lsearchTest(); //q6
@@ -42,6 +42,7 @@ void cartesianProductTest() {
 
 
 
+
 //Question 2 Test
 //**cost and cost function not equal, something wrong**
 void triangleTest() {
@@ -58,9 +59,18 @@ void triangleTest() {
 
 
 
-
-
-
+//Question 3 Test
+void matrixSelfMultiplyTest() {
+    cout << "MATRIX SELF MULTIPLY TEST" << endl;
+    int rows = 5;
+    int m[5][5] = { {10,2,3,5,4},{8,7,6,9,1} };
+    // int* matrix = *m;
+    int cost = 0;
+    cout << "result = " << matrixSelfMultiply(*m, rows, cost);
+    cout << endl << endl << "cost = " << cost;
+    cout << endl << "t(matrixSelfMultiply): func = " << "TBD";
+    cout << endl << "--------------------------------------------------------" << endl << endl;
+}
 
 
 
@@ -101,6 +111,7 @@ void patternTest() {
 
 
 
+
 //Question 6 Test
 void lsearchTest() {
     cout << "LINEAR SEARCH TEST" << endl;
@@ -113,6 +124,7 @@ void lsearchTest() {
        cout << endl << "t(lsearch): func = " << "TBD";
        cout << endl << "--------------------------------------------------------" << endl << endl;
 }
+
 
 
 

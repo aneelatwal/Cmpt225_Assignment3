@@ -68,42 +68,48 @@ void cartesianProduct(int arr[], int n, int & ops)
 
 
 
-// //Question 3
-// // PRE: m represents a square matrix of size rows * rows
-// // PARAM: rows represents the number of both rows and columns
-// // POST: Returns a pointer to an array (matrix) of the same size as m
-// // NOTE: values are indexed r0c0,r0c1,…,r0cn-1,r1c0,…
-// int* matrixSelfMultiply(int* m, int rows)
-// {
-//        // Create result array
-//        int columns = rows;
-//        int* result = new int[rows * columns];
-//        int r = 0;
+int rcIndex(int r, int c, int columns); //function declaration for Question 3
+//Question 3
+// PRE: m represents a square matrix of size rows * rows
+// PARAM: rows represents the number of both rows and columns
+// POST: Returns a pointer to an array (matrix) of the same size as m
+// NOTE: values are indexed r0c0,r0c1,…,r0cn-1,r1c0,…
+int* matrixSelfMultiply(int* m, int rows, int & ops)
+{
+       // Create result array
+       int columns = rows;
+       int* result = new int[rows * columns];
+       int r = 0;
+       ops += 3; //initialize cost for first 3 statements
 
-//        while (r < rows) {
-//               int c = 0;
-//               while (c < columns) { //columns = rows
-//                      int next = 0;
-//                      int iNext = 0;
+       while (r < rows) {
+              int c = 0;
+              while (c < columns) { //columns = rows
+                     int next = 0;
+                     int iNext = 0;
 
-//                      while (iNext < rows) {
-//                            next += m[rcIndex(r, iNext, columns)] * m[rcIndex(iNext, c, columns)];
-//                            iNext++;
-//                      }
+                     while (iNext < rows) {
+                           next += m[rcIndex(r, iNext, columns)] * m[rcIndex(iNext, c, columns)];
+                           iNext++;
+                           ops += 3; //while comparison, above 2 lines
+                     }
 
-//                      result[rcIndex(r, c, columns)] = next;
-//                      c++;
-//               }
-//               r++;
-//        }
-//        return result;
-// }
-// // Returns the index of a 1d array representing a matrix
-// // given row (r) and column (c) values
-// int rcIndex(int r, int c, int columns)
-// {
-//        return r * columns + c;
-// }
+                     result[rcIndex(r, c, columns)] = next;
+                     c++;
+                     ops += 6; //while comparison, initialize next and iNext, terminate while comparison, above 2 lines
+              } 
+              r++;
+              ops += 4; //while comparison, initialize c, terminate while comparison, above line
+       }
+       ops++; //terminate while comparison
+       return result;
+}
+// Returns the index of a 1d array representing a matrix
+// given row (r) and column (c) values
+int rcIndex(int r, int c, int columns)
+{
+       return r * columns + c;
+}
 
 
 
