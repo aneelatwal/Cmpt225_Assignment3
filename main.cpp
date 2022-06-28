@@ -51,7 +51,7 @@ void triangleTest() {
     int cost = 0;
     triangle(x, cost);
     cout << endl << "cost = " << cost;
-    cout << endl << "t(triangle): 6n(n-1)+10n+3 = " << 3 * std::pow(x,3) + 3 * std::pow(x,2) + 10 * x + 3; //**this line needs to be fixed**
+    cout << endl << "t(triangle): 3n^2+13n+1 = " << 3 * std::pow(x,2) + 13 * x + 3; //**this line needs to be fixed**
     cout << endl << "--------------------------------------------------------" << endl << endl;
 }
 
