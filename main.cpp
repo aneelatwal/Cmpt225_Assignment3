@@ -132,12 +132,12 @@ void lsearchTest() {
 //Question 7 Test
 void powTest() {
     cout << "POW TEST" << endl;
-    int base = 2;
+    int base = 4;
     int exp = 3;
     int cost = 0;
     cout << "power = " << pow(base, exp, cost);
     cout << endl << endl << "cost = " << cost;
-    cout << endl << "t(pow): func = " << "TBD";
+    cout << endl << "t(pow): 5n-3 = " << 5 * log2(exp) - 3;
     cout << endl << "--------------------------------------------------------" << endl << endl;
 }
 
