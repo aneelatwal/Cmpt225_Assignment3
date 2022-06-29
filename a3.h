@@ -6,6 +6,19 @@ using std::cout;
 using std::endl;
 using std::string;
 
+//function declarations
+void cartesianProduct(int arr[], int n, int & ops); //Question 1
+void triangle(int x, int & ops); //Question 2
+int* matrixSelfMultiply(int* m, int rows, int & ops); //Question 3
+int rcIndex(int r, int c, int columns); //Question 3
+void ssort(int arr[], int n, int i, int & ops); //Question 4
+void pattern(int n, int i, int & ops); //Question 5
+int lsearch(int arr[], unsigned int len, int target, int & ops); //Question 6
+unsigned pow(unsigned int base, unsigned int exp, int & ops); //Question 7
+
+
+
+
 
 
 //Question 1
@@ -70,7 +83,6 @@ void cartesianProduct(int arr[], int n, int & ops)
 
 
 
-int rcIndex(int r, int c, int columns); //function declaration for Question 3
 //Question 3
 // PRE: m represents a square matrix of size rows * rows
 // PARAM: rows represents the number of both rows and columns
@@ -228,6 +240,7 @@ unsigned pow(unsigned int base, unsigned int exp, int & ops) {
 
 
 //EXAMPLE
+//**** to be deleted for final submission ****
 int sumSquares(int arr[], int n, int & ops)
 {
     int i = 0;
