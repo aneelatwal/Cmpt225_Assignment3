@@ -68,7 +68,7 @@ void matrixSelfMultiplyTest() {
     int cost = 0;
     cout << "result = " << matrixSelfMultiply(*m, rows, cost);
     cout << endl << endl << "cost = " << cost;
-    cout << endl << "t(matrixSelfMultiply): func = " << "TBD";
+    cout << endl << "t(matrixSelfMultiply): 3n^3+6n^2+4n+4 = " << 3 * std::pow(rows,3) + 6 * std::pow(rows,2) + 4 * rows + 4;
     cout << endl << "--------------------------------------------------------" << endl << endl;
 }
 
