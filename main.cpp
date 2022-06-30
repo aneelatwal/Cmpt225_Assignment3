@@ -29,7 +29,7 @@ int main () {
 
 //Question 1 Test
 void cartesianProductTest() {
-    cout << "CARTESIAN PRODUCT TEST" << endl;
+    cout << "Q1 -- CARTESIAN PRODUCT TEST" << endl;
     int arr[] = { 1,2,3,4,5,6,7,8,9,10 };
     int n = 10;
     int cost = 0;
@@ -46,7 +46,7 @@ void cartesianProductTest() {
 //Question 2 Test
 //**cost and cost function not equal, something wrong**
 void triangleTest() {
-    cout << "TRIANGLE TEST" << endl;
+    cout << "Q2 -- TRIANGLE TEST" << endl;
     int x = 10;
     int cost = 0;
     triangle(x, cost);
@@ -61,7 +61,7 @@ void triangleTest() {
 
 //Question 3 Test
 void matrixSelfMultiplyTest() {
-    cout << "MATRIX SELF MULTIPLY TEST" << endl;
+    cout << "Q3 -- MATRIX SELF MULTIPLY TEST" << endl;
     int rows = 5;
     int m[5][5] = { {10,2,3,5,4},{8,7,6,9,1} };
     // int* matrix = *m;
@@ -77,8 +77,9 @@ void matrixSelfMultiplyTest() {
 
 
 //Question 4 Test
+//**** cost function incorrect, needs to be changed ****
 void ssortTest() {
-    cout << "SSORT TEST" << endl;
+    cout << "Q4 -- SSORT TEST" << endl;
     int arr[] = { 10,2,3,5,4,8,7,6,9,1 };
     int n = 10;
     int i = 0;
@@ -88,7 +89,8 @@ void ssortTest() {
         cout << endl << arr[i];
     }
     cout << endl << endl << "cost = " << cost;
-    cout << endl << "t(ssort): 4n+7 = " << 4 * n + 7;
+    cout << endl << "t(ssort): 2n^2+n-6 = " << 2 * std::pow(n,2) + n - 6;
+    //2 * std::pow(n,2) + n - 6
     cout << endl << "--------------------------------------------------------" << endl << endl;
 }
 
@@ -98,7 +100,7 @@ void ssortTest() {
 
 //Question 5 Test
 void patternTest() {
-    cout << "PATTERN TEST" << endl;
+    cout << "Q5 -- PATTERN TEST" << endl;
     int n = 8;
     int i = 0;
     int cost = 0;
@@ -114,7 +116,7 @@ void patternTest() {
 
 //Question 6 Test
 void lsearchTest() {
-    cout << "LINEAR SEARCH TEST" << endl;
+    cout << "Q6 -- LINEAR SEARCH TEST" << endl;
        int arr[] = { 1,2,3,4,5,6,7,8,9,10 };
        unsigned int len = 10;
        int target = 5;
@@ -131,7 +133,7 @@ void lsearchTest() {
 
 //Question 7 Test
 void powTest() {
-    cout << "POW TEST" << endl;
+    cout << "Q7 -- POW TEST" << endl;
     int base = 4;
     int exp = 3;
     int cost = 0;
@@ -148,7 +150,7 @@ void powTest() {
 //EXAMPLE Test
 void sumSquareTest()
 {
-       cout << "SUM OF SQUARES TEST" << endl;
+       cout << "EXAMPLE -- SUM OF SQUARES TEST" << endl;
        int arr[] = { 1,2,3,4,5,6,7,8,9,10 };
        int n = 10;
        int cost = 0;

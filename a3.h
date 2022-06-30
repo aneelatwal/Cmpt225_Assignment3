@@ -184,7 +184,7 @@ void pattern(int n, int i, int & ops)
 
             cout << endl;
             i += n;
-            ops += 5; //output string, initialize ast, terminate while comparison, above 2 lines
+            ops += 8; //output string, initialize ast, terminate while comparison, above 2 lines
             pattern(n / 2, i, ops);
     }
 }
