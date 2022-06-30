@@ -88,7 +88,7 @@ void ssortTest() {
         cout << endl << arr[i];
     }
     cout << endl << endl << "cost = " << cost;
-    cout << endl << "t(ssort): func = " << "TBD";
+    cout << endl << "t(ssort): 4n+7 = " << 4 * n + 7;
     cout << endl << "--------------------------------------------------------" << endl << endl;
 }
 
