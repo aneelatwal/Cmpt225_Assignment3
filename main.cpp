@@ -77,7 +77,7 @@ void matrixSelfMultiplyTest() {
 
 
 //Question 4 Test
-//**** cost function incorrect, needs to be changed ****
+//**** cost func incorrect, needs to be changed ****
 void ssortTest() {
     cout << "Q4 -- SSORT TEST" << endl;
     int arr[] = { 10,2,3,5,4,8,7,6,9,1 };
@@ -99,6 +99,7 @@ void ssortTest() {
 
 
 //Question 5 Test
+//**** cost func incorrect, needs to be changed ****
 void patternTest() {
     cout << "Q5 -- PATTERN TEST" << endl;
     int n = 8;
@@ -106,7 +107,7 @@ void patternTest() {
     int cost = 0;
     pattern(n, i, cost);
     cout << endl << endl << "cost = " << cost;
-    cout << endl << "t(pattern): func = " << "TBD";
+    cout << endl << "t(pattern): func = " << 2.5 * log2(n) + 16 * n - 8;
     cout << endl << "--------------------------------------------------------" << endl << endl;
 }
 
@@ -132,6 +133,7 @@ void lsearchTest() {
 
 
 //Question 7 Test
+//**** cost func incorrect, needs to be changed ****
 void powTest() {
     cout << "Q7 -- POW TEST" << endl;
     int base = 4;
@@ -139,7 +141,7 @@ void powTest() {
     int cost = 0;
     cout << "power = " << pow(base, exp, cost);
     cout << endl << endl << "cost = " << cost;
-    cout << endl << "t(pow): 5n-3 = " << 5 * log2(exp) - 3;
+    cout << endl << "t(pow): 6n-1 = " << 6 * exp - 1;
     cout << endl << "--------------------------------------------------------" << endl << endl;
 }
 
