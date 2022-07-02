@@ -80,8 +80,8 @@ void matrixSelfMultiplyTest() {
 //**** cost func incorrect, needs to be changed ****
 void ssortTest() {
     cout << "Q4 -- SSORT TEST" << endl;
-    int arr[] = { 2,3,4,5,6,7,8,9,10,1 };
-    int n = 10;
+    int arr[] = { 9,8,7,6,5,4,3,2,1 };
+    int n = 9;
     int i = 0;
     int cost = 0;
     ssort(arr, n, i, cost);
@@ -89,7 +89,7 @@ void ssortTest() {
         cout << endl << arr[i];
     }
     cout << endl << endl << "cost = " << cost;
-    cout << endl << "t(ssort): 2n^2+7n-6 = " << 2 * std::pow(n,2) + 7 * n - 6;
+    cout << endl << "t(ssort): (7/4)n^2 + (11/2)n - 6 = " << (7 * std::pow(n,2))/4 + (11 * n)/2 - 6;
     cout << endl << "--------------------------------------------------------" << endl << endl;
 }
 
@@ -101,7 +101,7 @@ void ssortTest() {
 //**** cost func incorrect, needs to be changed ****
 void patternTest() {
     cout << "Q5 -- PATTERN TEST" << endl;
-    int n = 16;
+    int n = 8;
     int i = 0;
     int cost = 0;
     pattern(n, i, cost);
