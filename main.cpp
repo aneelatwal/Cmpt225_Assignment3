@@ -101,12 +101,12 @@ void ssortTest() {
 //**** cost func incorrect, needs to be changed ****
 void patternTest() {
     cout << "Q5 -- PATTERN TEST" << endl;
-    int n = 8;
+    int n = 16;
     int i = 0;
     int cost = 0;
     pattern(n, i, cost);
     cout << endl << endl << "cost = " << cost;
-    cout << endl << "t(pattern): func = " << 2.5 * log2(n) + 16 * n - 8;
+    cout << endl << "t(pattern): 3nlog(n)+23n-9 = " << (3 * n * log2(n)) + 23 * n - 9;
     cout << endl << "--------------------------------------------------------" << endl << endl;
 }
 

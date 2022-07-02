@@ -170,22 +170,24 @@ void pattern(int n, int i, int & ops)
 {
     ops++; //if comparison
     if (n > 0) {
-            pattern(n/2, i, ops);
-            // Print i spaces
-            cout << string(i, ' ');
+        pattern(n/2, i, ops);
+        // Print i spaces
+        cout << string(i, ' ');
+        ops += 4; //above line (calling string constructor costs 3)
 
-            // A loop to print n asterisks, each one followed by a space
-            int ast = 0;
-            while (ast < n) {
-                    cout << "* ";
-                    ast++;
-                    ops += 3; //while comparison, above 2 lines
-            }
+        // A loop to print n asterisks, each one followed by a space
+        int ast = 0;
+        ops++; //above line
+        while (ast < n) {
+            cout << "* ";
+            ast++;
+            ops += 3; //while comparison, above 2 lines
+        }
 
-            cout << endl;
-            i += n;
-            ops += 8; //output string, initialize ast, terminate while comparison, above 2 lines
-            pattern(n / 2, i, ops);
+        cout << endl;
+        i += n;
+        ops += 3; //terminate while comparison, above 2 lines
+        pattern(n / 2, i, ops);
     }
 }
 
