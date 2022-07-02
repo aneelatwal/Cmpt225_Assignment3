@@ -121,9 +121,10 @@ void lsearchTest() {
        unsigned int len = 10;
        int target = 5;
        int cost = 0;
-       cout << "linear search = " << lsearch(arr, len, target, cost);
+       int count = 0;
+       cout << "linear search = " << lsearch(arr, len, target, cost, count);
        cout << endl << "cost = " << cost;
-       cout << endl << "t(lsearch): func = " << "TBD";
+       cout << endl << "t(lsearch) upper bound: func = " << "TBD";
        cout << endl << "--------------------------------------------------------" << endl << endl;
 }
 
@@ -140,9 +141,20 @@ void powTest() {
     int cost = 0;
     cout << "power = " << pow(base, exp, cost);
     cout << endl << endl << "cost = " << cost;
-    cout << endl << "t(pow): 6n-1 = " << 6 * exp - 1;
+    cout << endl << "t(pow) upper bound: 5n-3 = " << 5 * exp - 3;
     cout << endl << "--------------------------------------------------------" << endl << endl;
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 

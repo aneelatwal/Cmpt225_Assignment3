@@ -14,7 +14,7 @@ int* matrixSelfMultiply(int* m, int rows, int & ops); //Question 3
 int rcIndex(int r, int c, int columns); //Question 3
 void ssort(int arr[], int n, int i, int & ops); //Question 4
 void pattern(int n, int i, int & ops); //Question 5
-int lsearch(int arr[], unsigned int len, int target, int & ops); //Question 6
+int lsearch(int arr[], unsigned int len, int target, int & ops, int & count); //Question 6
 unsigned pow(unsigned int base, unsigned int exp, int & ops); //Question 7
 
 
@@ -205,16 +205,16 @@ void pattern(int n, int i, int & ops)
 //Question 6
 // Desc: Linear search.  Reports position if found, else -1
 // Post:  Elements unchanged
-int lsearch(int arr[], unsigned int len, int target, int & ops) {
+int lsearch(int arr[], unsigned int len, int target, int & ops, int & count) {
     ops++; //if comparison
     if (len == 0) return -1;
     ops++; //if comparison
     if (arr[0] == target) return 0;
     ops++; //if comparison
-    if (lsearch(arr+1, len-1, target, ops) == -1) {
+    if (lsearch(arr+1, len-1, target, ops, count) == -1) {
         return -1;
     } else {
-        return 1 + lsearch(arr+1, len-1, target, ops);
+        return 1 + lsearch(arr+1, len-1, target, ops, count);
     }
 } // lsearch
 
@@ -227,17 +227,34 @@ unsigned pow(unsigned int base, unsigned int exp, int & ops) {
     unsigned int ret = 1;
     ops = 1; //initializes cost for the first statement
     while (exp > 0) {
+        ops += 2; //while comparison and if comparison
         if (exp & 1) {
             ret *= base;
             ops++; //above line
         }
         exp >>= 1;
         base = base * base;
-        ops += 4; //while comparison, if comparison, above 2 lines
+        ops += 2; //while comparison, if comparison, above 2 lines
     }
     ops++; //terminate while comparison
     return ret;
 } // pow
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
