@@ -8,7 +8,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This program built for i386-apple-darwin11.3.0
  
 
-# Make data base, printed on Sat Jul  2 10:01:17 2022
+# Make data base, printed on Sun Jul  3 12:53:19 2022
 
 # Variables
 
@@ -39,7 +39,7 @@ VSCODE_VERBOSE_LOGGING = true
 # environment
 __CFBundleIdentifier = com.microsoft.VSCode
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/hj/j1qqvm6d6bb8cs4kbjprn69r0000gp/T/vscode-ipc-f1d5e20a-1a52-4313-9bb9-29d15904aeae.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/hj/j1qqvm6d6bb8cs4kbjprn69r0000gp/T/vscode-ipc-b289343f-6810-4e4c-8fec-66c4b0437d43.sock
 # environment
 VSCODE_CWD = /
 # environment
@@ -49,6 +49,7 @@ VSCODE_LOG_STACK = false
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # default
+ 
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
 SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.dhg1ns06r5/Listeners
@@ -71,7 +72,7 @@ VSCODE_CODE_CACHE_PATH = /Users/aneelatwal/Library/Application Support/Code/Cach
 # environment
 LOGNAME = aneelatwal
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # automatic
@@ -170,6 +171,7 @@ x: main.o
 #  File has been updated.
 #  Needs to be updated (-q is set).
 # variable set hash-table stats:
+ 
 # Load=0/32=0%, Rehash=0, Collisions=0/2=0%
 #  commands to execute (from `makefile', line 5):
 	g++ -o x main.o
@@ -193,7 +195,7 @@ makefile:
 # Not a target:
 a3.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-02 09:51:22
+#  Last modified 2022-07-02 15:40:51
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -202,7 +204,7 @@ a3.h:
 # Not a target:
 main.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-02 10:00:09
+#  Last modified 2022-07-02 15:40:27
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -263,6 +265,6 @@ main.o: main.cpp a3.h
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Sat Jul  2 10:01:17 2022
+# Finished Make data base on Sun Jul  3 12:53:19 2022
 
  

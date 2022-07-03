@@ -123,7 +123,7 @@ void lsearchTest() {
        int cost = 0;
        cout << "linear search = " << lsearch(arr, len, target, cost);
        cout << endl << "cost = " << cost;
-       cout << endl << "t(lsearch) upper bound: func = " << "TBD";
+       cout << endl << "t(lsearch) upper bound: 10(2^(n-2)-3) for n >= 2 = " << 10 * std::pow(2,(len-2)) - 3;
        cout << endl << "--------------------------------------------------------" << endl << endl;
 }
 
