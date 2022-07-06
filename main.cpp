@@ -140,7 +140,7 @@ void powTest() {
     int cost = 0;
     cout << "power = " << pow(base, exp, cost);
     cout << endl << endl << "cost = " << cost;
-    cout << endl << "t(pow) upper bound: 5n-3 = " << 5 * exp - 3;
+    cout << endl << "t(pow) upper bound: 4n+logn-1 = " << (4 * exp) + (log2(exp)) - 1;
     cout << endl << "--------------------------------------------------------" << endl << endl;
 }
 
