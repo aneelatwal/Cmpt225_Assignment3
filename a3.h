@@ -11,7 +11,7 @@ using std::string;
 void cartesianProduct(int arr[], int n, int & ops); //Question 1
 void triangle(int x, int & ops); //Question 2
 int* matrixSelfMultiply(int* m, int rows, int & ops); //Question 3
-int rcIndex(int r, int c, int columns); //Question 3
+int rcIndex(int r, int c, int columns, int & ops); //Question 3
 void ssort(int arr[], int n, int i, int & ops); //Question 4
 void pattern(int n, int i, int & ops); //Question 5
 int lsearch(int arr[], unsigned int len, int target, int & ops); //Question 6
@@ -109,12 +109,12 @@ int* matrixSelfMultiply(int* m, int rows, int & ops)
                      ops += 3; //while comparison, above 2 lines
 
                      while (iNext < rows) {
-                           next += m[rcIndex(r, iNext, columns)] * m[rcIndex(iNext, c, columns)];
+                           next += m[rcIndex(r, iNext, columns, ops)] * m[rcIndex(iNext, c, columns, ops)];
                            iNext++;
                            ops += 3; //while comparison, above 2 lines
                      }
 
-                     result[rcIndex(r, c, columns)] = next;
+                     result[rcIndex(r, c, columns, ops)] = next;
                      c++;
                      ops += 3; //terminate while comparison, above 2 lines
               } 
@@ -126,9 +126,10 @@ int* matrixSelfMultiply(int* m, int rows, int & ops)
 }
 // Returns the index of a 1d array representing a matrix
 // given row (r) and column (c) values
-int rcIndex(int r, int c, int columns)
+int rcIndex(int r, int c, int columns, int & ops)
 {
-       return r * columns + c;
+    ops++;
+    return r * columns + c;
 }
 
 
