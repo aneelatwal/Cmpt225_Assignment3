@@ -117,13 +117,13 @@ void patternTest() {
 //Question 6 Test
 void lsearchTest() {
     cout << "Q6 -- LINEAR SEARCH TEST" << endl;
-       int arr[] = { 1,2,3 };
-       unsigned int len = 3;
-       int target = 3;
+       int arr[] = { 1,2,3,4,5 };
+       unsigned int len = 5;
+       int target = 5;
        int cost = 0;
        cout << "linear search = " << lsearch(arr, len, target, cost);
        cout << endl << "cost = " << cost;
-       cout << endl << "t(lsearch) upper bound: 10(2^(n-2)-3) for n >= 2 = " << 10 * std::pow(2,(len-2)) - 3;
+       cout << endl << "t(lsearch) upper bound: 12(2^(n-2))-4 for n >= 2 = " << 12 * std::pow(2,(len-2)) - 4;
        cout << endl << "--------------------------------------------------------" << endl << endl;
 }
 
