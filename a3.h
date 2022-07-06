@@ -128,7 +128,7 @@ int* matrixSelfMultiply(int* m, int rows, int & ops)
 // given row (r) and column (c) values
 int rcIndex(int r, int c, int columns, int & ops)
 {
-    ops++;
+    ops++; //below line
     return r * columns + c;
 }
 
@@ -215,6 +215,7 @@ int lsearch(int arr[], unsigned int len, int target, int & ops) {
     if (lsearch(arr+1, len-1, target, ops) == -1) {
         return -1;
     } else {
+        ops++; //below line
         return 1 + lsearch(arr+1, len-1, target, ops);
     }
 } // lsearch
