@@ -41,7 +41,6 @@ void cartesianProductTest() {
 
 
 //Question 2 Test
-//**cost and cost function not equal, something wrong**
 void triangleTest() {
     cout << "Q2 -- TRIANGLE TEST" << endl;
     int x = 10;
@@ -74,7 +73,6 @@ void matrixSelfMultiplyTest() {
 
 
 //Question 4 Test
-//**** cost func incorrect, needs to be changed ****
 void ssortTest() {
     cout << "Q4 -- SSORT TEST" << endl;
     int arr[] = { 9,8,7,6,5,4,3,2,1 };
@@ -95,7 +93,6 @@ void ssortTest() {
 
 
 //Question 5 Test
-//**** cost func incorrect, needs to be changed ****
 void patternTest() {
     cout << "Q5 -- PATTERN TEST" << endl;
     int n = 8;
@@ -129,7 +126,6 @@ void lsearchTest() {
 
 
 //Question 7 Test
-//**** cost func incorrect, needs to be changed ****
 void powTest() {
     cout << "Q7 -- POW TEST" << endl;
     int base = 4;
