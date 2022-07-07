@@ -1,7 +1,6 @@
 #include "a3.h"
 #include <cmath>
 
-void sumSquareTest(); //EXAMPLE Test
 void cartesianProductTest(); //Question 1 Test
 void triangleTest(); //Question 2 Test
 void matrixSelfMultiplyTest(); //Question 3 Test
@@ -12,8 +11,6 @@ void powTest(); //Question 7 Test
 
 
 int main () {
-    sumSquareTest(); //Example
-
     cartesianProductTest(); //q1
     triangleTest(); //q2
     matrixSelfMultiplyTest(); //q3
@@ -136,38 +133,10 @@ void lsearchTest() {
 void powTest() {
     cout << "Q7 -- POW TEST" << endl;
     int base = 4;
-    int exp = 3;
+    int exp = 4;
     int cost = 0;
     cout << "power = " << pow(base, exp, cost);
     cout << endl << endl << "cost = " << cost;
-    cout << endl << "t(pow) upper bound: 4n+logn-1 = " << (4 * exp) + (log2(exp)) - 1;
+    cout << endl << "t(pow) upper bound: 4logn+log(n+1)+6 = " << (4 * log2(exp)) + (log2(exp+1)) + 6;
     cout << endl << "--------------------------------------------------------" << endl << endl;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//EXAMPLE Test
-void sumSquareTest()
-{
-       cout << "EXAMPLE -- SUM OF SQUARES TEST" << endl;
-       int arr[] = { 1,2,3,4,5,6,7,8,9,10 };
-       int n = 10;
-       int cost = 0;
-       cout << "sum of squares = " << sumSquares(arr, n, cost);
-       cout << endl << "cost = " << cost;
-       cout << endl << "t(sumSquares): 3n+3 = " << 3 * n + 3;
-       cout << endl << "--------------------------------------------------------" << endl << endl;
 }

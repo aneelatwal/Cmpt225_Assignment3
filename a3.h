@@ -226,12 +226,12 @@ int lsearch(int arr[], unsigned int len, int target, int & ops) {
 
 //Question 7
 unsigned pow(unsigned int base, unsigned int exp, int & ops) {
-    unsigned int ret = 1;
+    unsigned int ubtret = 1;
     ops = 1; //initializes cost for the first statement
     while (exp > 0) {
         ops += 2; //while comparison and if comparison
         if (exp & 1) {
-            ret *= base;
+            ubtret *= base;
             ops++; //above line
         }
         exp >>= 1;
@@ -239,46 +239,5 @@ unsigned pow(unsigned int base, unsigned int exp, int & ops) {
         ops += 2; //while comparison, if comparison, above 2 lines
     }
     ops++; //terminate while comparison
-    return ret;
+    return ubtret;
 } // pow
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//EXAMPLE
-//**** to be deleted for final submission ****
-int sumSquares(int arr[], int n, int & ops)
-{
-    int i = 0;
-    int sum = 0;
-    ops = 2; //initializes cost for the first two statements
-    while (i < n) {
-            sum += arr[i] * arr[i]; //counts as one operation
-            i++;
-            ops += 3; //while comparison and above two lines
-    }
-    ops++; //terminating while comparison
-    return sum; //not included in count
-}
